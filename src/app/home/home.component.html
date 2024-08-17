@@ -1,0 +1,24 @@
+<!-- <div id="Assessment-1">
+  <input type="text" name="UserName" [(ngModel)]="UserName" class="form-control" />
+  <p>{{UserName}}</p>
+
+  <button [disabled]="UserName==''" (click)="onUserNameReset()" class="btn btn-primary">User Name Reset</button>
+
+</div> -->
+<hr>
+<div id="Assessment-2">
+
+  <button [disabled]="UserName==''" (click)="onDisplayDetails()" class="btn btn-primary">Display Details</button>
+  @if(DisplayDetails){
+
+  <p>Secret Password = tuna</p>
+
+  }
+  @for (item of DisplayDetailsEvents; track item) {
+
+  <p [ngStyle]="{'color': item>=5?'white':' black'}" [ngClass]="{'item': item>=5}">
+{{    item
+}}  </p>
+  }
+
+</div>
